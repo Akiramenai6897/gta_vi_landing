@@ -85,10 +85,10 @@ main {
             @apply rounded-full md:size-28 size-20 bg-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex justify-center items-center;
         }
         .fake-logo-wrapper {
-            @apply absolute z-50 xs:top-[9.5rem] sm:top-[12.8rem] md:top-[8.5rem] 2xl:top-44 3xl:top-48 left-1/2 -translate-x-1/2;
+            @apply absolute z-50 xs:top-[9.5rem] sm:top-[12.8rem] md:top-[8.5rem] 2xl:top-36 3xl:top-48 left-1/2 -translate-x-1/2;
         }
         .overlay-logo {
-            @apply size-full object-cover opacity-0 w-44 md:w-48 2xl:w-72 3xl:w-80;
+            @apply size-full object-cover opacity-0 w-44 md:w-48 2xl:w-48 3xl:w-80;
         }
     }
     .first-vd-wrapper {
@@ -100,13 +100,14 @@ main {
         @apply absolute inset-0 w-full h-dvh overflow-hidden z-20 opacity-100;
 
         .entrance-logo {
-            @apply 2xl:w-72 3xl:w-80 md:w-48 w-44 absolute xs:top-[9.5rem] sm:top-[12.8rem] md:top-[8.5rem] 2xl:top-44 3xl:top-48 left-1/2 -translate-x-1/2;
+            @apply 2xl:w-48 3xl:w-80 md:w-48 w-44 absolute xs:top-[9.5rem] sm:top-[12.8rem] md:top-[8.5rem] 2xl:top-36 3xl:top-48 left-1/2 -translate-x-1/2;
         }
 
         .text-wrapper {
             @apply mt-40 md:mt-52 2xl:mt-44 3xl:top-48;
         }
     }
+
     .jason {
         @apply relative z-10 lg:ps-40 2xl:ps-80 ps-10 py-40 mt-60 flex lg:flex-row flex-col justify-between gap-5 w-dvw overflow-x-hidden;
 
