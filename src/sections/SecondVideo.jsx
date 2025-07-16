@@ -1,38 +1,32 @@
 import React from 'react';
-import { useRef } from 'react';
 import gsap from 'gsap';
 import { useGSAP } from "@gsap/react";
+import { useRef } from 'react';
 
-const FirstVideo = () => {
+const SecondVideo = () => {
     const videoRef = useRef(null)
 
     useGSAP(() => {
-        gsap.set(".first-vd-wrapper", {
+        gsap.set(".lucia", {
             opacity: 0,
-            marginTop: '-150vh'
+            marginTop: '-60vh'
         })
 
         const tl = gsap.timeline({
             scrollTrigger: {
-                trigger: ".first-vd-wrapper",
+                trigger: ".lucia",
                 start: "top top",
-                end: "+=200% top",
-                scrub: true,
+                end: "bottom top",
+                scrub: 2,
                 pin: true
             }
         })
 
-        tl.to(".hero-section", {
-                delay: 0.5,
-                opacity: 0,
-                ease: 'power1.inOut'
-            })
-            .to(".first-vd-wrapper", {
-                opacity: 1,
-                duration: 2,
-                ease: 'power1.inOut'
-            })
-
+        tl.to(".lucia", {
+            opacity: 1,
+            duration: 1,
+            ease: 'power1.inOut'
+        })
 
         videoRef.current.onloadedmetadata = () => {
             tl.to(videoRef.current, {
@@ -41,23 +35,25 @@ const FirstVideo = () => {
                 ease: 'power1.inOut'
             }, '<')
         }
-
-    }, [])
+    })
 
     return (
-        <section className={"first-vd-wrapper"}>
+        <section className={"lucia"}>
             <div className={"h-dvh"}>
                 <video
                     ref={videoRef}
+                    src={"/videos/output2.mp4"}
                     muted
                     playsInline
                     preload={"auto"}
-                    src={"/videos/output1.mp4"}
-                    className={"first-vd"}
+                    className={"second-vd size-full object-cover"}
+                    style={{
+                        objectPosition: '10% 0%'
+                    }}
                 />
             </div>
         </section>
     );
 };
 
-export default FirstVideo;
+export default SecondVideo;
