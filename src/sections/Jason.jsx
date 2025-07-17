@@ -22,7 +22,7 @@ const Jason = () => {
             ease: 'power1.inOut'
         })
 
-        gsap.to('.img-box', {
+        gsap.to('.jason .img-box', {
             scrollTrigger: {
                 trigger: '.jason',
                 start: 'top center',
